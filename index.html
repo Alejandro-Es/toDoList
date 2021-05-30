@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <header class="header">
+        <h1>ToDoList</h1>
+        <div class="menu" >
+            <button id="tab-tarea" class="tablinks" onclick="changeTab(event, 'crear-tarea')">Crear Tarea</button> 
+            <button id="tab-lista" class="tablinks" onclick="changeTab(event, 'container-lista')">Lista</button>
+        </div>
+    </header>
+    
+    <div id="crear-tarea" class="tabcontent">
+        <form id="form">
+            <h2>Crear Tarea</h2>
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" placeholder="Agregar titulo a la tarea">
+            <label for="hora">Hora programada</label>
+            <input type="time" id="hora">
+            <label for="prioridad">Prioridad</label>
+            <div class="prioridad">
+                <label for="prioridad-baja">Baja</label>
+                <input type="radio" name="prioridad" checked value="baja">
+                <label for="prioridad-media">Media</label>
+                <input type="radio" name="prioridad" value="media">
+                <label for="prioridad-alta">Alta</label>
+                <input type="radio" name="prioridad" value="alta">
+            </div>
+            <label for="comentarios">Comentarios</label>
+            <input type="text" id="comentarios" placeholder="Agregar comentarios a la tarea">
+            <small>Agregado con exito</small>
+            <button type="submit" id="btn-agregar">Agregar Tarea</button>
+        </form>
+    </div>
+
+    <div id="container-lista" class="tabcontent" >
+        <div class="lista-tareas">
+            <div>
+                <h2>Tareas Pendientes</h2>
+                <!-- <select name="orden-tareas">
+                    <option value="">De menor a mayor prioridad</option>
+                    <option value="">De mayor a menor prioridad</option>
+                    <option value="">Solo prioridad alta</option>
+                </select> -->
+            </div>
+            <div id="lista">
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="nueva-tarea">
+        <div class="prioridad-alta">
+            <h4>${hora}</h4>
+            <h5>${prioridad}</h5>
+        </div>
+        <div>
+            <h3>${titulo}</h3>
+            <p>${comentarios}</p>
+        </div>
+    </div> -->
+
+    <script src="script.js"> </script>
+       
+    </body>
+    </html> 
+</html>

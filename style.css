@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    background-color: #5da88f;
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: gray 0px 3px 5px;
+}
+
+.header h1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    margin-left: auto;
+    text-align: center;
+}
+
+#crear-tarea {
+    display: flex;
+    height: 92vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 90%;
+    border: #000000 solid 2px;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#form label {
+    margin: 5px;
+    color: black;
+}
+
+#form input {
+    margin: 5px;
+    padding: 1%;
+    border-radius: 5px;
+    border: gray 1px solid;
+    background-color: none;
+}
+
+#comentarios {
+    height: 180px;
+    text-align: center;
+}
+
+#btn-agregar {
+    position: static;
+    background-color: #5da88f;
+    cursor: pointer;
+    color: white;
+    height: 30px;
+    width: 150px;
+    margin: auto;
+    border: gray 1px solid;
+    border-radius: 5px;
+}
+
+#btn-agregar:hover {
+    background-color: #559982;
+}
+
+#btn-agregar:active {
+    background-color: #4e8674;
+    box-shadow: 1px 1px 5px #559982;
+}
+
+#lista {
+    padding: 10px;
+    margin: 10px;
+}
+
+small {
+    text-align: center;
+    display: none;
+    margin-top: 2px;
+    color: green;
+}
+
+.tablinks {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 15px;
+  }
+  
+  /* Style the buttons inside the tab */
+.tablinks {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+.tablinks:hover {
+    color: white;
+  }
+  
+  /* Style the tab content */
+.tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.prioridad { 
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    margin-left: 5px;
+    justify-content: space-around;
+    border: gray 1px solid;
+    border-radius: 5px;
+}
+
+.prioridad-tarea {
+    background: gray;
+}
+
+.lista-tareas {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    border: rgb(59, 59, 59) solid 2px;
+    padding: 10px;
+    box-shadow: 1px 1px 50px 30px  #5da88f inset;
+    margin: 10px;
+    align-items: center;
+}
+
+.lista-tareas :first-child{
+    display: flex;
+    flex-direction: column;
+}
+
+#lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.container {
+    display: flex;
+    height: 92vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.nueva-tarea {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: black solid 1px;
+    border-radius: 5px;
+    background-color: #5da88f;
+    margin: 5px;
+}
+
+.nueva-tarea :first-child {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.nueva-tarea p {
+    margin: 10px;
+    text-align: center;
+}
+
+.nueva-tarea h3 {
+    text-align: center;
+    border-bottom: gray 1px solid;
+    margin: auto;
+}
+.prioridad-baja {
+    background-color: green;
+}
+
+.prioridad-media {
+    background-color: orange;
+}
+
+.prioridad-alta {
+    background-color: red;
+}
+
+
+
+@media screen and (max-width: 770px){
+    #form {
+        width: 90%;
+        
+    }
+    .lista-tareas {
+        width: 90%;
+        height: max-content;
+    }
+    
+    #lista {
+        height: max-content;
+    }
+    
+    #container-lista {
+        display: block;
+        height: max-content;
+    }
+
+    .nueva-tarea {
+        width: 90%;
+        height: max-content;
+    }
+}
+
+@media screen and (min-width: 771px) {
+    #form {
+        width: 45%;
+    }
+    .lista-tareas {
+        width: 80%;
+        
+    }
+    .nueva-tarea {
+        width: 400px;
+    }
+    /* #lista {
+        flex-wrap: wrap;
+    } */
+    #container-lista {
+        display: none;
+        height: max-content;
+    }
+}
+
